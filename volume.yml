@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: vault-volume
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 10Gi
+  storageClassName: manuel
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/rsacal/kube/vault/data"
